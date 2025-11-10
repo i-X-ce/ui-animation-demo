@@ -53,7 +53,7 @@ function EasingItem({
               "absolute h-10 w-10 bg-accent rounded-full shrink-0 shadow-md",
               moved ? "right-8" : "left-8"
             )}
-            style={{ opacity: 1 - i * 0.3 }}
+            style={{ opacity: 1 - i * 0.3, zIndex: 10 - i }}
           />
         ))}
       </motion.div>
