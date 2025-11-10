@@ -1,6 +1,5 @@
 import clsx from "clsx";
 import { motion } from "motion/react";
-import React from "react";
 import { VIEW_NAME, type ViewType } from "../consts/VIEW";
 import { useView } from "../context/viewContext";
 
@@ -30,6 +29,7 @@ function SideBarItem({
           <motion.div
             className="absolute bg-text-primary/20 inset-0 rounded-md shadow-md"
             layoutId="selected"
+            transition={{ type: "spring", stiffness: 150, damping: 20 }}
           />
         )}
 
