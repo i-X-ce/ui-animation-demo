@@ -15,6 +15,9 @@ function EasingItem({
   const timer = React.useRef<number | null>(null);
 
   React.useEffect(() => {
+    setTimeout(() => {
+      setMoved(true);
+    }, 1);
     timer.current = setInterval(() => {
       setMoved((prev) => !prev);
     }, DURATION * 1000 + 500);
@@ -32,20 +35,27 @@ function EasingItem({
       </h3>
       <motion.div layout className="relative flex  items-center py-5">
         <div className="h-1 w-full bg-primary rounded-full" />
-        <motion.div
-          layoutId={`circle-${(type as string) || (ease as string)}`}
-          className={clsx(
-            "absolute h-10 w-10 bg-accent rounded-full shrink-0 shadow-md",
-            moved ? "right-0" : "left-0"
-          )}
-          transition={(() => {
-            if (type === "spring") {
-              return { type, stiffness: 100, damping: 10 };
-            } else {
-              return { duration: DURATION, ease };
-            }
-          })()}
-        />
+        {Array.from({ length: 3 }).map((_, i) => (
+          <motion.div
+            key={i}
+            layoutId={`circle-${(type as string) || (ease as string)}-${i}`}
+            transition={{
+              ...(() => {
+                if (type === "spring") {
+                  return { type, stiffness: 100, damping: 10 };
+                } else {
+                  return { duration: DURATION, ease };
+                }
+              })(),
+              delay: i * 0.1,
+            }}
+            className={clsx(
+              "absolute h-10 w-10 bg-accent rounded-full shrink-0 shadow-md",
+              moved ? "right-8" : "left-8"
+            )}
+            style={{ opacity: 1 - i * 0.3 }}
+          />
+        ))}
       </motion.div>
     </div>
   );
