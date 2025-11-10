@@ -1,5 +1,9 @@
 @import "tailwindcss";
 
+* {
+  scrollbar-color: var(--accent) transparent;
+}
+
 :root {
   --background: #f8f9fa;
   --primary: #5f53ce;
