@@ -41,3 +41,25 @@ export type ViewType =
   | keyof typeof UI_TYPE
   | keyof typeof ORDER_TYPE
   | keyof typeof LAW_TYPE;
+
+export const VIEW_NAME: Record<ViewType, string> = {
+  EASING: "Easing",
+  UI: "UI Animations",
+  ORDER: "Order Animations",
+  LAW: "Animation Laws",
+  BUTTON: "Button",
+  SWITCH: "Switch",
+  MODAL: "Modal",
+  TABS: "Tabs",
+  ACCORDION: "Accordion",
+  ABOVE: "From Above",
+  BELOW: "From Below",
+  LEFT: "From Left",
+  RIGHT: "From Right",
+  DESCENDING: "Descending",
+  ASCENDING: "Ascending",
+  GRAVITY: "Gravity",
+  SPRING: "Spring",
+  FRICTION: "Friction",
+  PREPARATORY: "Preparatory Motion",
+};
