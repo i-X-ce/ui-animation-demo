@@ -3,6 +3,7 @@ import { VIEW_STRUCTURE } from "../consts/VIEW";
 import SideBarItem from "./SideBarItem";
 import { AnimatePresence, motion } from "motion/react";
 import clsx from "clsx";
+import LAYERS from "../consts/LAYERS";
 
 function SideBar() {
   const [open, setOpen] = React.useState(true);
@@ -25,9 +26,10 @@ function SideBar() {
           exit={{ x: -300, opacity: 0 }}
           transition={{ type: "spring", stiffness: 300, damping: 30 }}
           className={clsx(
-            "fixed md:sticky top-0 w-[250px] max-h-dvh bg-primary px-2 overflow-auto pb-4 shrink-0 min-h-dvh z-200"
-          )}>
-          <h2 className="sticky top-0 border-b border-background/50 text-2xl p-4 font-bold text-background mb-2 bg-primary z-20">
+            "fixed md:sticky top-0 w-[250px] max-h-dvh bg-primary px-2 overflow-auto pb-4 shrink-0 min-h-dvh"
+          )}
+          style={{ zIndex: LAYERS.SIDEBAR + 10 }}>
+          <h2 className="sticky top-0 border-b border-background/50 text-2xl p-4 font-bold text-background mb-2 bg-primary z-10">
             <button
               onClick={handleClose}
               className="flex items-center gap-2 w-full">
@@ -57,7 +59,8 @@ function SideBar() {
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
           onClick={handleOpen}
-          className="fixed top-4 left-4 p-2 bg-primary rounded-full shadow-lg z-200 ">
+          className="fixed top-4 left-4 p-2 bg-primary rounded-full shadow-lg "
+          style={{ zIndex: LAYERS.SIDEBAR + 1 }}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             height="24px"
@@ -77,6 +80,7 @@ function SideBar() {
           exit={{ opacity: 0 }}
           transition={{ duration: 0.2 }}
           className="fixed md:hidden top-0 left-0 w-screen h-screen bg-black z-100"
+          style={{ zIndex: LAYERS.SIDEBAR }}
         />
       )}
     </AnimatePresence>

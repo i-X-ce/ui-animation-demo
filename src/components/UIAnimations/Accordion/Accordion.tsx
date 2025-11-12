@@ -15,7 +15,7 @@ function Accordion({ ...props }: MotionProps) {
         className="flex flex-col px-4 py-4 border border-primary/70 rounded-lg">
         <button
           onClick={handleToggleOpen}
-          className="flex items-center justify-between text-2xl text-primary">
+          className="flex items-center justify-between text-2xl text-primary font-bold select-none">
           {props.children as React.ReactNode}
           <motion.svg
             xmlns="http://www.w3.org/2000/svg"

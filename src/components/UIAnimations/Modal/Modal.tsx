@@ -1,6 +1,7 @@
 import { AnimatePresence, motion, type MotionProps } from "motion/react";
 import Button from "../Button/Button";
 import { useState } from "react";
+import LAYERS from "../../../consts/LAYERS";
 
 function Modal({ ...props }: MotionProps) {
   const [open, setOpen] = useState(false);
@@ -21,6 +22,7 @@ function Modal({ ...props }: MotionProps) {
           <>
             <motion.div
               className="fixed bg-black inset-0"
+              style={{ zIndex: LAYERS.MODAL }}
               initial={{ opacity: 0 }}
               animate={{ opacity: 0.5 }}
               exit={{ opacity: 0 }}
@@ -28,6 +30,7 @@ function Modal({ ...props }: MotionProps) {
             />
             <div
               className="fixed flex items-center justify-center inset-0"
+              style={{ zIndex: LAYERS.MODAL + 1 }}
               onClick={handleClose}>
               <motion.div
                 onClick={(e) => e.stopPropagation()}
