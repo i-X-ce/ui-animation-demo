@@ -10,6 +10,7 @@ export default function ViewProvider({
   children: React.ReactNode;
 }) {
   const [view, setView] = useState<ViewType>(INITIAL_VIEW);
+  window.scrollTo(0, 0);
 
   return (
     <ViewContext.Provider value={{ view, setView }}>
