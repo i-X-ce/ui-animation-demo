@@ -2,14 +2,12 @@ export const VIEWS_TYPE = {
   EASING: "EASING", // イージング
   UI: "UI", // UI
   ORDER: "ORDER", // 順序
-  LAW: "LAW", // 法則
+  SIZE: "SIZE", // 大きさ
 };
 
 export const UI_TYPE = {
   BUTTON: "BUTTON",
-  SWITCH: "SWITCH",
   MODAL: "MODAL",
-  TABS: "TABS",
   ACCORDION: "ACCORDION",
 };
 
@@ -22,35 +20,31 @@ export const ORDER_TYPE = {
   ASCENDING: "ASCENDING", // 昇順
 };
 
-export const LAW_TYPE = {
-  GRAVITY: "GRAVITY", // 重力
-  SPRING: "SPRING", // バネ
-  FRICTION: "FRICTION", // 摩擦
-  PREPARATORY: "PREPARATORY", // 予備動作
+export const SIZE_TYPE = {
+  SMALL: "SMALL", //
+  BIG: "BIG",
 };
 
 export const VIEW_STRUCTURE = {
   [VIEWS_TYPE.EASING]: [],
   [VIEWS_TYPE.UI]: Object.values(UI_TYPE),
   [VIEWS_TYPE.ORDER]: Object.values(ORDER_TYPE),
-  [VIEWS_TYPE.LAW]: Object.values(LAW_TYPE),
+  [VIEWS_TYPE.SIZE]: Object.values(SIZE_TYPE),
 };
 
 export type ViewType =
   | keyof typeof VIEWS_TYPE
   | keyof typeof UI_TYPE
   | keyof typeof ORDER_TYPE
-  | keyof typeof LAW_TYPE;
+  | keyof typeof SIZE_TYPE;
 
 export const VIEW_NAME: Record<ViewType, string> = {
   EASING: "Easing",
   UI: "UI Animations",
   ORDER: "Order Animations",
-  LAW: "Animation Laws",
+  SIZE: "Screen Size",
   BUTTON: "Button",
-  SWITCH: "Switch",
   MODAL: "Modal",
-  TABS: "Tabs",
   ACCORDION: "Accordion",
   ABOVE: "From Above",
   BELOW: "From Below",
@@ -58,8 +52,6 @@ export const VIEW_NAME: Record<ViewType, string> = {
   RIGHT: "From Right",
   DESCENDING: "Descending",
   ASCENDING: "Ascending",
-  GRAVITY: "Gravity",
-  SPRING: "Spring",
-  FRICTION: "Friction",
-  PREPARATORY: "Preparatory Motion",
+  SMALL: "Phone Size",
+  BIG: "Desktop Size",
 };
