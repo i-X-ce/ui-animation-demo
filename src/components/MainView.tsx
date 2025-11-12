@@ -1,6 +1,6 @@
 import { useView } from "../context/viewContext";
 import { VIEW_NAME } from "../consts/VIEW";
-import EasingView from "./UIAnimations/Easing/EasingView";
+import EasingView from "./Easing/EasingView";
 import ButtonView from "./UIAnimations/Button/ButtonView";
 import AccordionView from "./UIAnimations/Accordion/AccordionView";
 import ModalView from "./UIAnimations/Modal/ModalView";
