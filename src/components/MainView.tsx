@@ -1,6 +1,7 @@
 import { useView } from "../context/viewContext";
 import { VIEW_NAME } from "../consts/VIEW";
 import EasingView from "./EasingView";
+import ButtonView from "./ButtonView";
 
 function MainView() {
   const { view } = useView();
@@ -14,6 +15,7 @@ function MainView() {
           {viewName.slice(1)}
         </h1>
         {view === "EASING" && <EasingView />}
+        {view === "BUTTON" && <ButtonView />}
       </div>
     </section>
   );

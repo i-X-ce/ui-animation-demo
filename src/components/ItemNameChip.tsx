@@ -1,9 +1,9 @@
-import React from "react";
+import type { ReactNode } from "react";
 
-function ItemNameChip({ children }: { children: string }) {
+function ItemNameChip({ children }: { children: ReactNode }) {
   return (
     <div className="flex">
-      <h3 className="px-3 py-1 border border-text-secondary rounded-full">
+      <h3 className="px-3 py-1 border border-text-secondary text-text-secondary rounded-full">
         {children}
       </h3>
     </div>

@@ -1,4 +1,3 @@
-import React from "react";
 import EasingItem from "./EasingItem";
 import type { AnimationGeneratorType, Easing } from "motion";
 
