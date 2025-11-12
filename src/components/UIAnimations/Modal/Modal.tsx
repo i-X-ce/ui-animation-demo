@@ -35,7 +35,7 @@ function Modal({ ...props }: MotionProps) {
                 animate={{ scale: 1, opacity: 1 }}
                 exit={{ scale: 0.8, opacity: 0 }}
                 {...props}
-                className="relative bg-white max-w-[700px] max-h-[80%] p-6 rounded-lg shadow-lg overflow-y-auto">
+                className="relative bg-white max-w-[80vw] md:max-w-[700px] max-h-[80%] p-6 rounded-lg shadow-lg overflow-y-auto">
                 <h3 className="text-2xl text-primary font-bold pb-4">
                   {props.children as string}
                 </h3>
