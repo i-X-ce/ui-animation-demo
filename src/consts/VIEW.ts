@@ -7,8 +7,8 @@ export const VIEWS_TYPE = {
 
 export const UI_TYPE = {
   BUTTON: "BUTTON",
-  MODAL: "MODAL",
   ACCORDION: "ACCORDION",
+  MODAL: "MODAL",
 };
 
 export const ORDER_TYPE = {
