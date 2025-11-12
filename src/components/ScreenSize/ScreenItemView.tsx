@@ -6,7 +6,7 @@ import ScreenItem, { type ScreenSize } from "./ScreenItem";
 
 function ScreenItemView({ size }: { size: ScreenSize }) {
   return (
-    <div className={clsx("flex flex-wrap gap-4 justify-center")}>
+    <div className={clsx("flex flex-wrap gap-4")}>
       {[
         { chipName: "button", component: <ButtonView /> },
         { chipName: "accordion", component: <AccordionView /> },
