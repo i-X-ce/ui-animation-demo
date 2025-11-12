@@ -1,5 +1,5 @@
 import TRANSITIONS from "../../consts/TRANSITIONS";
-import OrderViewItem from "./OrderViewItem";
+import OrderViewItem from "./OrderItem";
 
 export type OrderType = "above" | "below" | "left" | "right";
 
