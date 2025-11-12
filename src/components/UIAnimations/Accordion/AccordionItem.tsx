@@ -1,11 +1,11 @@
 import type { Transition } from "motion";
-import ItemNameChip from "../ItemNameChip";
-import SPEEDS from "../../consts/SPEEDS";
-import Modal from "./Modal";
+import ItemNameChip from "../../ItemNameChip";
+import SPEEDS from "../../../consts/SPEEDS";
+import Accordion from "./Accordion";
 
-function ModalItem({ transition }: { transition: Transition }) {
+function AccordionItem({ transition }: { transition: Transition }) {
   return (
-    <div className="flex-1">
+    <div>
       <ItemNameChip>
         {
           (transition.type === "spring"
@@ -15,16 +15,16 @@ function ModalItem({ transition }: { transition: Transition }) {
       </ItemNameChip>
       <div className="flex mt-2 gap-4">
         {Object.entries(SPEEDS).map(([speedName, value]: [string, number]) => (
-          <Modal
+          <Accordion
             key={speedName}
             transition={{ duration: value, ...transition }}>
             {speedName.charAt(0)?.toUpperCase()}
             {speedName.slice(1).toLowerCase()}
-          </Modal>
+          </Accordion>
         ))}
       </div>
     </div>
   );
 }
 
-export default ModalItem;
+export default AccordionItem;

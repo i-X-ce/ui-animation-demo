@@ -1,4 +1,4 @@
-import TRANSITIONS from "../../consts/TRANSITIONS";
+import TRANSITIONS from "../../../consts/TRANSITIONS";
 import ModalItem from "./ModalItem";
 
 function ModalView() {

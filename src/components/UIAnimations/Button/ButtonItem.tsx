@@ -1,6 +1,6 @@
 import type { Transition } from "motion";
-import ItemNameChip from "../ItemNameChip";
-import SPEEDS from "../../consts/SPEEDS";
+import ItemNameChip from "../../ItemNameChip";
+import SPEEDS from "../../../consts/SPEEDS";
 import Button from "./Button";
 
 function ButtonItem({ transition }: { transition: Transition }) {
