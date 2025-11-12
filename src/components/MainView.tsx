@@ -4,6 +4,7 @@ import EasingView from "./UIAnimations/Easing/EasingView";
 import ButtonView from "./UIAnimations/Button/ButtonView";
 import AccordionView from "./UIAnimations/Accordion/AccordionView";
 import ModalView from "./UIAnimations/Modal/ModalView";
+import UIAnimationsView from "./UIAnimations/UIAnimationsView";
 
 function MainView() {
   const { view } = useView();
@@ -17,6 +18,7 @@ function MainView() {
           {viewName.slice(1)}
         </h1>
         {view === "EASING" && <EasingView />}
+        {view === "UI" && <UIAnimationsView />}
         {view === "BUTTON" && <ButtonView />}
         {view === "ACCORDION" && <AccordionView />}
         {view === "MODAL" && <ModalView />}
