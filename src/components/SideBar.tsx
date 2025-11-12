@@ -5,7 +5,7 @@ import { motion } from "motion/react";
 
 function SideBar() {
   return (
-    <nav className="sticky top-0 w-[250px] max-h-dvh bg-primary px-2 overflow-auto pb-4 shrink-0">
+    <nav className="sticky top-0 w-[250px] max-h-dvh bg-primary px-2 overflow-auto pb-4 shrink-0 min-h-dvh">
       <h2 className="sticky top-0 border-b border-background/50 text-2xl p-4 font-bold text-background mb-2 bg-primary z-20">
         <span className="text-accent">UI</span> Animation
       </h2>
