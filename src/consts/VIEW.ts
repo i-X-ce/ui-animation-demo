@@ -22,7 +22,7 @@ export const ORDER_TYPE = {
 
 export const SIZE_TYPE = {
   SMALL: "SMALL", //
-  BIG: "BIG",
+  LARGE: "LARGE",
 };
 
 export const VIEW_STRUCTURE = {
@@ -53,5 +53,5 @@ export const VIEW_NAME: Record<ViewType, string> = {
   // DESCENDING: "Descending",
   // ASCENDING: "Ascending",
   SMALL: "Phone Size",
-  BIG: "Desktop Size",
+  LARGE: "Desktop Size",
 };

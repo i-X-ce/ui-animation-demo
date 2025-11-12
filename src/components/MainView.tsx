@@ -7,6 +7,7 @@ import ModalView from "./UIAnimations/Modal/ModalView";
 import UIAnimationsView from "./UIAnimations/UIAnimationsView";
 import OrderView from "./OrderAnimations/OrderView";
 import OrderAnimationsView from "./OrderAnimations/OrderAnimationsView";
+import ScreenItemView from "./ScreenSize/ScreenItemView";
 
 function MainView() {
   const { view } = useView();
@@ -29,6 +30,8 @@ function MainView() {
         {view === "BELOW" && <OrderView orderType="below" />}
         {view === "LEFT" && <OrderView orderType="left" />}
         {view === "RIGHT" && <OrderView orderType="right" />}
+        {view === "SMALL" && <ScreenItemView size="sm" />}
+        {view === "LARGE" && <ScreenItemView size="lg" />}
       </div>
     </section>
   );
