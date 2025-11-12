@@ -1,6 +1,7 @@
 import clsx from "clsx";
 import { motion, type AnimationGeneratorType, type Easing } from "motion/react";
 import React from "react";
+import ItemNameChip from "./ItemNameChip";
 
 const DURATION = 1.5;
 
@@ -28,10 +29,8 @@ function EasingItem({
 
   return (
     <div>
-      <h3 className="text-lg text-text-secondary">
-        {(type as string) || (ease as string)}
-      </h3>
-      <motion.div layout className="relative flex  items-center py-5">
+      <ItemNameChip>{(type as string) || (ease as string)}</ItemNameChip>
+      <motion.div layout className="relative flex items-center py-5 mt-2">
         <div className="h-1 w-full bg-primary rounded-full" />
         {Array.from({ length: 3 }).map((_, i) => (
           <motion.div
