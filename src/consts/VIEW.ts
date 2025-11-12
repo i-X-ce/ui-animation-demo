@@ -16,8 +16,8 @@ export const ORDER_TYPE = {
   BELOW: "BELOW", // 下から
   LEFT: "LEFT", // 左から
   RIGHT: "RIGHT", // 右から
-  DESCENDING: "DESCENDING", // 降順
-  ASCENDING: "ASCENDING", // 昇順
+  // DESCENDING: "DESCENDING", // 降順
+  // ASCENDING: "ASCENDING", // 昇順
 };
 
 export const SIZE_TYPE = {
@@ -50,8 +50,8 @@ export const VIEW_NAME: Record<ViewType, string> = {
   BELOW: "From Below",
   LEFT: "From Left",
   RIGHT: "From Right",
-  DESCENDING: "Descending",
-  ASCENDING: "Ascending",
+  // DESCENDING: "Descending",
+  // ASCENDING: "Ascending",
   SMALL: "Phone Size",
   BIG: "Desktop Size",
 };
