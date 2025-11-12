@@ -6,6 +6,7 @@ import AccordionView from "./UIAnimations/Accordion/AccordionView";
 import ModalView from "./UIAnimations/Modal/ModalView";
 import UIAnimationsView from "./UIAnimations/UIAnimationsView";
 import OrderView from "./OrderAnimations/OrderView";
+import OrderAnimationsView from "./OrderAnimations/OrderAnimationsView";
 
 function MainView() {
   const { view } = useView();
@@ -23,6 +24,7 @@ function MainView() {
         {view === "BUTTON" && <ButtonView />}
         {view === "ACCORDION" && <AccordionView />}
         {view === "MODAL" && <ModalView />}
+        {view === "ORDER" && <OrderAnimationsView />}
         {view === "ABOVE" && <OrderView orderType="above" />}
         {view === "BELOW" && <OrderView orderType="below" />}
         {view === "LEFT" && <OrderView orderType="left" />}

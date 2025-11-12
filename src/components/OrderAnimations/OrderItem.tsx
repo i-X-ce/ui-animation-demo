@@ -20,8 +20,9 @@ const ORDER_POSITIONS: Record<OrderType, OrderPosType> = {
 
 function OrderViewItem({
   orderType,
+  itemName,
   ...props
-}: { orderType: OrderType } & MotionProps) {
+}: { orderType: OrderType; itemName?: string } & MotionProps) {
   const [open, setOpen] = useState(false);
   const timer = useRef<number | null>(null);
   const pos = ORDER_POSITIONS[orderType];
@@ -41,11 +42,11 @@ function OrderViewItem({
   return (
     <div>
       <ItemNameChip>
-        {
-          (props?.transition?.type === "spring"
-            ? props?.transition?.type
-            : props?.transition?.ease) as string
-        }
+        {itemName
+          ? itemName
+          : ((props?.transition?.type === "spring"
+              ? props?.transition?.type
+              : props?.transition?.ease) as string)}
       </ItemNameChip>
       <div
         className="h-[300px] grid gap-2 mt-2 border border-black/10 p-2 rounded-md overflow-clip"
