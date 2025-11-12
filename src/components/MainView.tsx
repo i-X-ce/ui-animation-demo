@@ -1,8 +1,8 @@
 import { useView } from "../context/viewContext";
 import { VIEW_NAME } from "../consts/VIEW";
-import EasingView from "./EasingView";
-import ButtonView from "./ButtonView";
-import AccordionView from "./AccordionView";
+import EasingView from "./Easing/EasingView";
+import ButtonView from "./Button/ButtonView";
+import AccordionView from "./Accordion/AccordionView";
 
 function MainView() {
   const { view } = useView();

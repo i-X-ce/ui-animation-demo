@@ -1,11 +1,11 @@
 import type { Transition } from "motion";
-import ItemNameChip from "./ItemNameChip";
-import SPEEDS from "../consts/SPEEDS";
-import Accordion from "./Accordion";
+import ItemNameChip from "../ItemNameChip";
+import SPEEDS from "../../consts/SPEEDS";
+import Button from "./Button";
 
-function AccordionItem({ transition }: { transition: Transition }) {
+function ButtonItem({ transition }: { transition: Transition }) {
   return (
-    <div>
+    <div className="flex-1">
       <ItemNameChip>
         {
           (transition.type === "spring"
@@ -15,16 +15,16 @@ function AccordionItem({ transition }: { transition: Transition }) {
       </ItemNameChip>
       <div className="flex mt-2 gap-4">
         {Object.entries(SPEEDS).map(([speedName, value]: [string, number]) => (
-          <Accordion
+          <Button
             key={speedName}
             transition={{ duration: value, ...transition }}>
             {speedName.charAt(0)?.toUpperCase()}
             {speedName.slice(1).toLowerCase()}
-          </Accordion>
+          </Button>
         ))}
       </div>
     </div>
   );
 }
 
-export default AccordionItem;
+export default ButtonItem;

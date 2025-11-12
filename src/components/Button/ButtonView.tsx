@@ -1,4 +1,4 @@
-import TRANSITIONS from "../consts/TRANSITIONS";
+import TRANSITIONS from "../../consts/TRANSITIONS";
 import ButtonItem from "./ButtonItem";
 
 function ButtonView() {

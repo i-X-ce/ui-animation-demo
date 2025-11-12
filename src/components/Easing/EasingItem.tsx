@@ -1,7 +1,7 @@
 import clsx from "clsx";
 import { motion, type AnimationGeneratorType, type Easing } from "motion/react";
 import React from "react";
-import ItemNameChip from "./ItemNameChip";
+import ItemNameChip from "../ItemNameChip";
 
 const DURATION = 1.5;
 
