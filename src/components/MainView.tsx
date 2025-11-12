@@ -3,6 +3,7 @@ import { VIEW_NAME } from "../consts/VIEW";
 import EasingView from "./Easing/EasingView";
 import ButtonView from "./Button/ButtonView";
 import AccordionView from "./Accordion/AccordionView";
+import ModalView from "./Modal/ModalView";
 
 function MainView() {
   const { view } = useView();
@@ -18,6 +19,7 @@ function MainView() {
         {view === "EASING" && <EasingView />}
         {view === "BUTTON" && <ButtonView />}
         {view === "ACCORDION" && <AccordionView />}
+        {view === "MODAL" && <ModalView />}
       </div>
     </section>
   );
