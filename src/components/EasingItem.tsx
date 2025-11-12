@@ -15,9 +15,7 @@ function EasingItem({
   const timer = React.useRef<number | null>(null);
 
   React.useEffect(() => {
-    setTimeout(() => {
-      setMoved(true);
-    }, 1);
+    setMoved(true);
     timer.current = setInterval(() => {
       setMoved((prev) => !prev);
     }, DURATION * 1000 + 500);
