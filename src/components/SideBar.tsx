@@ -7,8 +7,12 @@ import clsx from "clsx";
 function SideBar() {
   const [open, setOpen] = React.useState(true);
 
-  const handleToggleOpen = () => {
-    setOpen((prev) => !prev);
+  const handleOpen = () => {
+    setOpen(true);
+  };
+
+  const handleClose = () => {
+    setOpen(false);
   };
 
   return (
@@ -25,7 +29,7 @@ function SideBar() {
           )}>
           <h2 className="sticky top-0 border-b border-background/50 text-2xl p-4 font-bold text-background mb-2 bg-primary z-20">
             <button
-              onClick={handleToggleOpen}
+              onClick={handleClose}
               className="flex items-center gap-2 w-full">
               <span className="text-accent">UI</span> Animation
             </button>
@@ -52,7 +56,7 @@ function SideBar() {
           transition={{ type: "spring", stiffness: 300, damping: 30 }}
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
-          onClick={handleToggleOpen}
+          onClick={handleOpen}
           className="fixed top-4 left-4 p-2 bg-primary rounded-full shadow-lg z-200 ">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -67,7 +71,7 @@ function SideBar() {
       {open && (
         <motion.div
           key="drop"
-          onClick={handleToggleOpen}
+          onClick={handleClose}
           initial={{ opacity: 0 }}
           animate={{ opacity: 0.5 }}
           exit={{ opacity: 0 }}
