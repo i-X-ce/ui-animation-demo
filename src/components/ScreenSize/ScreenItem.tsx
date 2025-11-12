@@ -14,13 +14,13 @@ function ScreenItem({
   children?: ReactNode;
 }) {
   return (
-    <div className="justify-self-stretch">
+    <div className={clsx(size === "lg" && "w-full")}>
       <ItemNameChip>{chipName}</ItemNameChip>
       <div
         className={clsx(
           "border-4 border-primary rounded-lg overflow-auto mt-2 p-4",
           size === "sm" && "w-[375px] h-[667px]",
-          size === "lg" && "w-[1200px] h-[80vh]"
+          size === "lg" && "w-full aspect-video"
         )}>
         {children}
       </div>
