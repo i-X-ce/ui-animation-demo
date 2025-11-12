@@ -29,7 +29,7 @@ function SideBar() {
             "fixed md:sticky top-0 w-[250px] max-h-dvh bg-primary px-2 overflow-auto pb-4 shrink-0 min-h-dvh"
           )}
           style={{ zIndex: LAYERS.SIDEBAR + 10 }}>
-          <h2 className="sticky top-0 border-b border-background/50 text-2xl p-4 font-bold text-background mb-2 bg-primary z-10">
+          <h2 className="sticky top-0 border-b border-background/50 text-2xl p-4 font-bold text-background mb-2 bg-primary z-20">
             <button
               onClick={handleClose}
               className="flex items-center gap-2 w-full">
