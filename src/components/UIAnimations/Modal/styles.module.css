@@ -1,0 +1,9 @@
+.modalViewWrapper {
+  container-type: inline-size;
+}
+
+@container (max-width: 800px) {
+  .modalView {
+    grid-template-columns: 1fr;
+  }
+}

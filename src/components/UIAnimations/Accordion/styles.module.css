@@ -1,0 +1,9 @@
+.itemContainer {
+  container-type: inline-size;
+}
+
+@container (max-width: 600px) {
+  .accordionContainer {
+    flex-wrap: wrap;
+  }
+}

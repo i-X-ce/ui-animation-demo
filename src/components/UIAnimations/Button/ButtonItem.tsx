@@ -19,7 +19,7 @@ function ButtonItem({
               ? transition.type
               : transition.ease) as string)}
       </ItemNameChip>
-      <div className="flex mt-2 gap-4">
+      <div className="flex mt-2 gap-4 flex-wrap">
         {Object.entries(SPEEDS).map(([speedName, value]: [string, number]) => (
           <Button
             key={speedName}

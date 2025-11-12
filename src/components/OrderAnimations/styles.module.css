@@ -1,0 +1,15 @@
+.itemWrapper {
+  container-type: inline-size;
+}
+
+@container (max-width: 800px) {
+  .item {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@container (max-width: 400px) {
+  .item {
+    grid-template-columns: 1fr;
+  }
+}

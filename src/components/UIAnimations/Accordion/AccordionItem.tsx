@@ -2,10 +2,12 @@ import type { Transition } from "motion";
 import ItemNameChip from "../../ItemNameChip";
 import SPEEDS from "../../../consts/SPEEDS";
 import Accordion from "./Accordion";
+import styles from "./styles.module.css";
+import clsx from "clsx";
 
 function AccordionItem({ transition }: { transition: Transition }) {
   return (
-    <div>
+    <div className={styles.itemContainer}>
       <ItemNameChip>
         {
           (transition.type === "spring"
@@ -13,7 +15,7 @@ function AccordionItem({ transition }: { transition: Transition }) {
             : transition.ease) as string
         }
       </ItemNameChip>
-      <div className="flex mt-2 gap-4">
+      <div className={clsx("flex mt-2 gap-4", styles.accordionContainer)}>
         {Object.entries(SPEEDS).map(([speedName, value]: [string, number]) => (
           <Accordion
             key={speedName}

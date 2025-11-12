@@ -1,0 +1,9 @@
+.buttonViewWrapper {
+  container-type: inline-size;
+}
+
+@container (max-width: 800px) {
+  .buttonView {
+    grid-template-columns: 1fr;
+  }
+}
