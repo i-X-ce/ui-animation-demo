@@ -3,15 +3,21 @@ import ItemNameChip from "../../ItemNameChip";
 import SPEEDS from "../../../consts/SPEEDS";
 import Button from "./Button";
 
-function ButtonItem({ transition }: { transition: Transition }) {
+function ButtonItem({
+  transition,
+  chipName,
+}: {
+  transition: Transition;
+  chipName?: string;
+}) {
   return (
     <div className="flex-1">
       <ItemNameChip>
-        {
-          (transition.type === "spring"
-            ? transition.type
-            : transition.ease) as string
-        }
+        {chipName
+          ? chipName
+          : ((transition.type === "spring"
+              ? transition.type
+              : transition.ease) as string)}
       </ItemNameChip>
       <div className="flex mt-2 gap-4">
         {Object.entries(SPEEDS).map(([speedName, value]: [string, number]) => (
